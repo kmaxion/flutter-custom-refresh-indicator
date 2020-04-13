@@ -6,6 +6,7 @@ import 'indicators/simple_indicator.dart';
 import 'screens/example_indicator_screen.dart';
 import 'screens/ice_cream_indicator_screen.dart';
 import 'screens/plane_indicator_screen.dart';
+import 'screens/article_example_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         '/plane': (context) => PlaneIndicatorScreen(),
         '/ice_cream': (context) => IceCreamIndicatorScreen(),
         '/presentation': (context) => PresentationScreen(),
+        '/article_example': (context) => ExampleScreen(),
       },
     );
   }
@@ -48,6 +50,19 @@ class MainScreen extends StatelessWidget {
               onPressed: () => Navigator.pushNamed(
                 context,
                 '/presentation',
+              ),
+            ),
+            const SizedBox(height: 15),
+            RaisedButton(
+              child: Container(
+                height: 50,
+                alignment: Alignment.center,
+                child: Text("Article example"),
+              ),
+              onPressed: () => Navigator.pushNamed(
+                context,
+                '/article_example',
+                arguments: simpleIndicator,
               ),
             ),
             const SizedBox(height: 15),
