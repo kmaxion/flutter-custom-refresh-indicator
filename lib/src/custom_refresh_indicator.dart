@@ -274,8 +274,8 @@ class _CustomRefreshIndicatorState extends State<CustomRefreshIndicator>
     _dragOffset = 0;
 
     controller._setIndicatorState(IndicatorState.loading);
-    await _animationController.animateTo(1.0,
-        duration: widget.armedToLoadingDuration);
+    // await _animationController.animateTo(1.0,
+    //     duration: widget.armedToLoadingDuration);
     await widget.onRefresh();
 
     if (!mounted) return;
